@@ -112,9 +112,9 @@ class _TimelinePageState extends State<TimelinePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Timeline Demo')),
+      appBar: AppBar(title: const Text('Timeline Demo')),
       floatingActionButton: FloatingActionButton(
-          onPressed: updateItems, child: Icon(Icons.update)),
+          onPressed: updateItems, child: const Icon(Icons.update)),
       body: Timeline<Item>(
         items: items,
         startDate: DateTime(2024, 1, 1),
@@ -123,13 +123,13 @@ class _TimelinePageState extends State<TimelinePage> {
             start: DateTime(2024, 1, 5), end: DateTime(2024, 1, 12)),
         columnWidth: _columnWidth,
         rowHeight: _rowHeight,
-        duration: Duration(milliseconds: 250),
+        duration: const Duration(milliseconds: 250),
         curve: Curves.easeInOut,
         builder: (context, item) {
           final width = (item.range.duration.inDays + 1) * _columnWidth;
           return AnimatedContainer(
             key: ValueKey(item.id),
-            duration: Duration(milliseconds: 250),
+            duration: const Duration(milliseconds: 250),
             alignment: AlignmentDirectional.topStart,
             curve: Curves.easeInOut,
             width: width,

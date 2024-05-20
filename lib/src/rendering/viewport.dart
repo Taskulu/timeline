@@ -36,7 +36,7 @@ class RenderTimelineViewport extends BaseTwoDimensionalViewport {
   void layoutChild(ChildVicinity vicinity) {
     final child = buildOrObtainChildFor(vicinity);
     if (child != null) {
-      child.layout(BoxConstraints());
+      child.layout(const BoxConstraints());
       final layoutOffsetInViewport =
           Offset(vicinity.xIndex * columnWidth, vicinity.yIndex * rowHeight);
       parentDataOf(child).layoutOffset = layoutOffsetInViewport -

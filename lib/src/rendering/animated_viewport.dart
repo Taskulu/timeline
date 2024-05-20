@@ -1,4 +1,3 @@
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
 import 'viewport.dart';
@@ -93,7 +92,7 @@ class AnimatedRenderTimelineViewport extends RenderTimelineViewport {
   void layoutChild(ChildVicinity vicinity) {
     final child = buildOrObtainChildFor(vicinity);
     if (child != null) {
-      child.layout(BoxConstraints());
+      child.layout(const BoxConstraints());
       final parentData =
           parentDataOf(child) as AnimatedTwoDimensionalViewportParentData;
       final previousVicinity = parentData.previousVicinity;

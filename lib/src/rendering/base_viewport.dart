@@ -19,10 +19,6 @@ abstract class BaseTwoDimensionalViewport extends RenderTwoDimensionalViewport {
   });
 
   @override
-  TwoDimensionalViewportParentData parentDataOf(RenderBox child) =>
-      child.parentData as TwoDimensionalViewportParentData;
-
-  @override
   void layoutChildSequence() {
     computeColumnRange();
     computeRowRange();
